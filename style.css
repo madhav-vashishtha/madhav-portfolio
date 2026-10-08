@@ -1047,3 +1047,29 @@ body.modal-open {
     transform: translateY(0);
   }
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 25px 6%;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer strong {
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
