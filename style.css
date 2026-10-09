@@ -444,7 +444,13 @@ h1 {
   width: 100%;
   height: 420px;
   display: block;
-  object-fit: cover;
+  object-fit: cover;.photo-card img {
+  width: 100%;
+  height: 420px;
+  display: block;
+  object-fit: contain;
+  object-position: center top;
+}
 }
 
 .photo-card small {
@@ -1189,4 +1195,38 @@ body.modal-open {
 :focus-visible {
   outline: 2px solid #b49cff;
   outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .photo-card {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+  }
+
+  .photo-card img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+    object-position: center top;
+  }
+}
+
+/* Fix About photo cropping */
+#about .photo-card {
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  aspect-ratio: auto !important;
+}
+
+#about .photo-card img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center top !important;
 }
